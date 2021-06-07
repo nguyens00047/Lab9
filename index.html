@@ -27,7 +27,7 @@
 </head>
 <body>
   <fieldset>
-    <legend>Error Calculator</legend>
+    <legend>Error </legend>
     <input type="number" name="first-num" id="first-num" />
     <select name="operator" id="operator">
       <option>+</option>
@@ -36,7 +36,7 @@
       <option>/</option>
     </select>
     <input type="number" name="second-num" id="second-num" />
-    <button id="calculate">Calculate</button>
+    <button id="calculate"Calculator>Calculate</button>
     <br />
     <output></output>
   </fieldset>
@@ -111,7 +111,7 @@
     });
 
     errorBtns[5].addEventListener('click', () => {
-      console.groupEnd("groupend");
+      console.groupEnd("group");
     });
 
     errorBtns[6].addEventListener('click', () => {
@@ -135,6 +135,13 @@
       const four = () => { console.trace(); };
       one();
     })
+
+    function toughLuck(){
+      throw new CalculatorError("tough luck");
+    }
+    errorBtns[10].addEventListener('click', () => {
+      toughLuck();
+    });
 
     TrackJS.track('Testing TrackJS!');
                         
